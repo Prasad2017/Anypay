@@ -28,7 +28,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.digi.anypayments.Extra.Common;
+import com.digi.anypayments.Fragment.AddWallet;
 import com.digi.anypayments.Fragment.Home;
+import com.digi.anypayments.Fragment.MyAccount;
 import com.digi.anypayments.Fragment.MyWalletBalance;
 import com.digi.anypayments.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -118,7 +120,14 @@ public class MainPage extends AppCompatActivity {
                         break;
 
                     case R.id.mymoney:
-                        loadFragment(new MyWalletBalance(), true);
+                        loadFragment(new AddWallet(), true);
+                        break;
+
+                    case R.id.history:
+                        break;
+
+                    case R.id.account:
+                        loadFragment(new MyAccount(), true);
                         break;
 
                 }

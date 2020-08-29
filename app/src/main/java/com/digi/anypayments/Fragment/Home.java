@@ -132,7 +132,7 @@ public class Home extends Fragment {
                 break;
 
             case R.id.walletLayout:
-                ((MainPage) getActivity()).loadFragment(new Wallet(), true);
+                ((MainPage) getActivity()).loadFragment(new AddWallet(), true);
                 break;
         }
     }

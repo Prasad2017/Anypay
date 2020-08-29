@@ -38,7 +38,7 @@
                     android:layout_height="50dp"
                     android:background="@null"
                     android:digits="0123456789"
-                    android:drawableLeft="@drawable/rupee"
+                    android:drawableLeft="@drawable/rupeenw"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/poppinsmedium"
                     android:hint="Enter Amount"

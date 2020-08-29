@@ -8,11 +8,14 @@ import androidx.fragment.app.Fragment;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.StrictMode;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.andreabaccega.widget.FormEditText;
 import com.digi.anypayments.Activity.Login;
@@ -69,10 +72,15 @@ public class AddWallet extends Fragment implements PaymentStatusListener {
     View view;
     @BindView(R.id.amount)
     FormEditText formEditText;
+    @BindView(R.id.walletBalance)
+    TextView textView;
+    @BindView(R.id.topUpWallet)
+    TextView topUpWallet;
     Handler mHandler = new Handler(Looper.getMainLooper());
     public static String mtx, paymentToken, timeStamp;
     private static String mSecretKey = "ddb5dc2837d7784092fa60123a4ee314680ef3de";
     private static String mAccessKey = "00ab8450-bb76-11ea-973f-85c936500fe2";
+
 
 
     @Override
@@ -82,16 +90,60 @@ public class AddWallet extends Fragment implements PaymentStatusListener {
         view = inflater.inflate(R.layout.fragment_add_wallet, container, false);
         ButterKnife.bind(this, view);
 
-        MainPage.titleLayout.setBackgroundColor(getActivity().getResources().getColor(R.color.blue_grey_900));
+        MainPage.titleLayout.setBackgroundColor(getActivity().getResources().getColor(R.color.colorPrimary));
+
+        textView.setText(""+MainPage.walletBalance);
+
+        formEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+                try {
+
+                    if (formEditText.getText().toString().trim().length()>0){
+                        topUpWallet.setBackgroundColor(getActivity().getResources().getColor(R.color.colorPrimary));
+                        topUpWallet.setClickable(true);
+                    } else {
+                        topUpWallet.setBackgroundColor(getActivity().getResources().getColor(R.color.grey_40));
+                        topUpWallet.setClickable(false);
+                    }
+
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+
+            }
+        });
 
         return view;
 
     }
 
-    @OnClick({R.id.topUpWallet})
+    @OnClick({R.id.topUpWallet, R.id.fivehundred, R.id.thousand, R.id.twothousand})
     public void onClick(View view){
-
         switch (view.getId()){
+
+            case R.id.fivehundred:
+                formEditText.setText("500");
+                break;
+
+            case R.id.thousand:
+                formEditText.setText("1000");
+                break;
+
+            case R.id.twothousand:
+                formEditText.setText("2000");
+                break;
 
             case R.id.topUpWallet:
 
@@ -153,12 +205,12 @@ public class AddWallet extends Fragment implements PaymentStatusListener {
             }
         });*/
 
-      mHandler.post(new Runnable() {
-          @Override
-          public void run() {
-              Toasty.normal(getActivity(), "", Toasty.LENGTH_SHORT).show();
-          }
-      });
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                Toasty.normal(getActivity(), "", Toasty.LENGTH_SHORT).show();
+            }
+        });
 
 
     }
@@ -178,7 +230,7 @@ public class AddWallet extends Fragment implements PaymentStatusListener {
                 System.out.println("Response :: " + response);
 
                 addWallet(transactionDetails.paymentId, transactionDetails.paymentTokenId, transactionDetails.status);
-                
+
             }
         });
 
