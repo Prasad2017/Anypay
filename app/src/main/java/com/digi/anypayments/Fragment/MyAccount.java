@@ -66,6 +66,14 @@ public class MyAccount extends Fragment {
                 break;
 
             case R.id.shareLayout:
+
+                // share app with your friends
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/*");
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name));
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "Try this " + getResources().getString(R.string.app_name) + " App: https://play.google.com/store/apps/details?id=" + getActivity().getPackageName());
+                startActivity(Intent.createChooser(shareIntent, "Share Using"));
+
                 break;
 
         }

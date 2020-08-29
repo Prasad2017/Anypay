@@ -176,15 +176,6 @@ public class AddWallet extends Fragment implements PaymentStatusListener {
 
     }
 
-    private void topUpWallet(String amount) {
-
-        Map<String, String> stringStringMap = new HashMap<>();
-        stringStringMap.put("Authorization", "bearer " + MainPage.accessToken.replace("\"", ""));
-
-
-    }
-
-
     public void onStart() {
         super.onStart();
         Log.e("onStart", "called");
@@ -208,7 +199,7 @@ public class AddWallet extends Fragment implements PaymentStatusListener {
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                Toasty.normal(getActivity(), "", Toasty.LENGTH_SHORT).show();
+                Toasty.normal(getActivity(), ""+String.format("onError: \n%s", s), Toasty.LENGTH_SHORT).show();
             }
         });
 
@@ -229,8 +220,11 @@ public class AddWallet extends Fragment implements PaymentStatusListener {
 
                 System.out.println("Response :: " + response);
 
-                addWallet(transactionDetails.paymentId, transactionDetails.paymentTokenId, transactionDetails.status);
-
+                if (transactionDetails.status.equalsIgnoreCase("cancelled")){
+                    Toasty.normal(getActivity(), "payment canceled", Toasty.LENGTH_SHORT).show();
+                } else {
+                    addWallet(transactionDetails.paymentId, transactionDetails.paymentTokenId, transactionDetails.status);
+                }
             }
         });
 

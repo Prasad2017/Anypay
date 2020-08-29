@@ -226,7 +226,8 @@ public class MainPage extends AppCompatActivity {
         if (bool) {
             transaction.addToBackStack(null);
         }
-        transaction.commit();
+        transaction.commitAllowingStateLoss();
+
     }
 
     private void logout() {

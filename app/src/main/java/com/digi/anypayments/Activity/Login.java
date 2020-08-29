@@ -329,15 +329,9 @@ public class Login extends AppCompatActivity implements GoogleApiClient.Connecti
         HASH_KEY = (String) new AppSignatureHelper(this).getAppSignatures().get(0);
         HASH_KEY = HASH_KEY.replace("+", "%252B");
         OTP= new DecimalFormat("000000").format(new Random().nextInt(999999));
-        String message = "<#> Your Anypayments verification OTP code is "+ OTP +". Please DO NOT share this OTP with anyone.\n" + HASH_KEY;
-        //Your authentication key
-        String authkey = "YourAuthKey";
-        //Multiple mobiles numbers separated by comma
-        String mobiles = "9999999";
+        String message = "<#> Your Relapayemnt verification OTP code is "+ OTP +". Please DO NOT share this OTP with anyone.\n" + HASH_KEY;
         //Sender ID,While using route4 sender id should be 6 characters long.
-        String senderId = "DEMOOO";
-        //define route
-        String route="default";
+        String senderId = "MYRPAY";
 
         URLConnection myURLConnection=null;
         URL myURL=null;
@@ -345,18 +339,19 @@ public class Login extends AppCompatActivity implements GoogleApiClient.Connecti
         //encoding message
         String encoded_message=URLEncoder.encode(message);
         //Send SMS API
-        String mainUrl="http://198.15.103.106/API/pushsms.aspx?";
+        String mainUrl="http://103.10.234.154/vendorsms/pushsms.aspx?";
         //Prepare parameter string
         StringBuilder sbPostData= new StringBuilder(mainUrl);
-        sbPostData.append("loginID=DEMOTEST");
-        sbPostData.append("&password=Zplus@123");
-        sbPostData.append("&mobile="+mobileNumber);
-        sbPostData.append("&text="+encoded_message);
-        sbPostData.append("&senderid="+senderId);
-        sbPostData.append("&route_id=1");
-        sbPostData.append("&Unicode=1");
+        sbPostData.append("user=ANYPAY");
+        sbPostData.append("&password=realpay");
+        sbPostData.append("&msisdn="+mobileNumber);
+        sbPostData.append("&sid="+senderId);
+        sbPostData.append("&msg="+message);
+        sbPostData.append("&fl=0");
+        sbPostData.append("&gwid=2");
         //final string
         mainUrl = sbPostData.toString();
+        Log.e("url",""+mainUrl);
         try
         {
             //prepare connection
@@ -368,53 +363,29 @@ public class Login extends AppCompatActivity implements GoogleApiClient.Connecti
             String response;
             while ((response = reader.readLine()) != null) {
                 //print response
-                Log.d("RESPONSE", "" + response);
+                Log.d("RESPONSE", "" + response.substring(response.indexOf("=") + 1));
 
-                Gson gson = new Gson();
-                OTPResponse otpResponse = gson.fromJson(response, OTPResponse.class);
-                Log.d("otpResponse", "" + otpResponse.getMsgStatus());
-                if (otpResponse.getLoginStatus().equalsIgnoreCase("Success")) {
-                    progressDialog.dismiss();
-                    if (otpResponse.getMsgStatus().equalsIgnoreCase("failed")) {
+                response = response.substring(response.indexOf("=") + 1);
 
-                        otpView.setVisibility(View.GONE);
 
-                        cardViews.get(0).setVisibility(View.GONE);
-                        cardViews.get(2).setVisibility(View.GONE);
-                        cardViews.get(3).setVisibility(View.GONE);
-                        cardViews.get(4).setVisibility(View.GONE);
-                        cardViews.get(5).setVisibility(View.GONE);
-                        forgotPassword.setVisibility(View.GONE);
+                if (response.equalsIgnoreCase("SUCCESS")) {
 
-                    } else if (otpResponse.getMsgStatus().equalsIgnoreCase("Sent")) {
+                    otpView.setVisibility(View.VISIBLE);
 
-                        otpView.setVisibility(View.VISIBLE);
+                    cardViews.get(1).setClickable(false);
+                    cardViews.get(1).setFocusable(false);
 
-                        cardViews.get(1).setClickable(false);
-                        cardViews.get(1).setFocusable(false);
+                    cardViews.get(0).setVisibility(View.GONE);
+                    cardViews.get(2).setVisibility(View.GONE);
+                    cardViews.get(3).setVisibility(View.GONE);
+                    cardViews.get(4).setVisibility(View.GONE);
+                    cardViews.get(5).setVisibility(View.GONE);
+                    forgotPassword.setVisibility(View.GONE);
 
-                        cardViews.get(0).setVisibility(View.GONE);
-                        cardViews.get(2).setVisibility(View.GONE);
-                        cardViews.get(3).setVisibility(View.GONE);
-                        cardViews.get(4).setVisibility(View.GONE);
-                        cardViews.get(5).setVisibility(View.GONE);
-                        forgotPassword.setVisibility(View.GONE);
+                    startSMSListener();
+                    textView.setText("Verify");
 
-                        textView.setText("Verify");
-
-                    } else {
-
-                        otpView.setVisibility(View.GONE);
-
-                        cardViews.get(0).setVisibility(View.GONE);
-                        cardViews.get(2).setVisibility(View.GONE);
-                        cardViews.get(3).setVisibility(View.GONE);
-                        cardViews.get(4).setVisibility(View.GONE);
-                        cardViews.get(5).setVisibility(View.GONE);
-                        forgotPassword.setVisibility(View.GONE);
-                    }
                 } else {
-                    progressDialog.dismiss();
 
                     otpView.setVisibility(View.GONE);
 
@@ -424,9 +395,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.Connecti
                     cardViews.get(4).setVisibility(View.GONE);
                     cardViews.get(5).setVisibility(View.GONE);
                     forgotPassword.setVisibility(View.GONE);
-
                 }
-
             }
 
             //finally close connection
@@ -506,6 +475,17 @@ public class Login extends AppCompatActivity implements GoogleApiClient.Connecti
         Task<Void> mTask = mClient.startSmsRetriever();
         mTask.addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override public void onSuccess(Void aVoid) {
+
+                cardViews.get(1).setClickable(false);
+                cardViews.get(1).setFocusable(false);
+
+                cardViews.get(0).setVisibility(View.GONE);
+                cardViews.get(2).setVisibility(View.GONE);
+                cardViews.get(3).setVisibility(View.GONE);
+                cardViews.get(4).setVisibility(View.GONE);
+                cardViews.get(5).setVisibility(View.GONE);
+                forgotPassword.setVisibility(View.GONE);
+                textView.setText("Verify");
 
             }
         });
