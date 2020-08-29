@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">RealPayments</string>
+    <string name="singup"><u>SIGN UP</u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="secure_payment_text"><b><font fgcolor='#000000'>100 % Purchase Protection</font></b><br /><b><font fgcolor='#F9A825'> Original Products | Secure Payment </font> </b> </string>
+    <string name="emailId">sawantp500@gmail.com</string>
+    <string name="err_msg_email">Please Enter A Valid Email Id</string>
+    <string name="contactNo">0123456789</string>
+    <string name="save">Save</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="hello_developer">Hello Dear !</string>
+    <string name="android_development_community">Android Development Community</string>
+    <string name="login">Login</string>
+    <string name="you_are_not_a_member_register">You are not a member? <b><font fgcolor='#3CDA85'>Register.</font></b></string>
+    <string name="nice_to_see_you">Nice to see you!</string>
+    <string name="email_hint">Enter Mobile Number</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="view_profile">view profile</string>
+    <string name="verify">Verify</string>
+    <string name="enter_your_an_otp_and_we_will_verify_an_otp_to_change_the_password">Enter your an OTP and we will verify an OTP to change the password</string>
+    <string name="submit">Submit</string>
+    <string name="todo">TODO</string>
+
+    <array name="menuOptions">
+        <item>Home</item>
+        <item>Personal</item>
+        <item>High scores</item>
+        <item>Settings</item>
+        <item>About</item>
+    </array>
+
+    <string name="proceed">Proceed</string>
+    <string name="new_security_pin">new security pin</string>
+    <string name="confirm_security_pin">confirm security pin</string>
+
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_offers">Offers</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_payment">Scan &amp; Pay</string>
+    <string name="title_my_account">My Account</string>
+    <string name="title_transactions">Transactions</string>
+    <string name="title_invite">Invite</string>
+    <string name="title_notification">Notification</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_mobile">Mobile</string>
+    <string name="txt_electricity">Electricity</string>
+    <string name="txt_credit_card">Credit Card</string>
+    <string name="txt_broadband">Broadband</string>
+    <string name="txt_insurance">Insurance</string>
+    <string name="txt_water">Water</string>
+    <string name="txt_recharge_pay_bills">Recharge &amp; Pay Bills</string>
+    <string name="txt_buy_on_phonepe">Buy on PhonePe</string>
+    <string name="txt_gift_cards">Gift Cards</string>
+    <string name="txt_red_bus">Red Bus</string>
+    <string name="txt_bhim_upi_id">BHIM UPI ID</string>
+    <string name="txt_bank_account">Bank Account</string>
+    <string name="txt_wallets">Wallets</string>
+    <string name="txt_saved_cards">Saved Cards</string>
+    <string name="txt_manage_autopay">Manage AutoPay</string>
+    <string name="txt_invite_and_earn">Invite &amp; Earn</string>
+    <string name="txt_language">Language</string>
+    <string name="txt_english">English</string>
+    <string name="txt_help">Help</string>
+    <string name="txt_policies">Policies</string>
+    <string name="txt_categories">Categories</string>
+    <string name="txt_recharge">Recharge</string>
+    <string name="txt_bill_pay">Bill Pay</string>
+    <string name="txt_send_money">Send Money</string>
+    <string name="txt_travel">Travel</string>
+    <string name="txt_groceries">Groceries</string>
+    <string name="txt_food">Food</string>
+    <string name="txt_movies">Movies</string>
+    <string name="txt_others">Others</string>
+    <string name="txt_terms_conditions">*T&amp;C Apply</string>
+    <string name="txt_discount_flat">Flat</string>
+    <string name="txt_discount_30_percent">30%</string>
+    <string name="txt_discount_25_percent">25%</string>
+    <string name="txt_discount_10_percent">10%</string>
+    <string name="txt_discount_cashback">Cashback*</string>
+    <string name="txt_discount_onwards">Onwards</string>
+    <string name="txt_offline_merchants">Offline merchants</string>
+    <string name="rupees">₹</string>
+    <string name="txt_online_merchants">Online Merchants</string>
+    <string name="txt_offer">Offer</string>
+    <string name="txt_popular_recharge_and_bill_pay_offers">Popular Recharge and bill pay offers</string>
+    <string name="txt_money_transfers">Money Transfers</string>
+    <string name="txt_to_contact">To Contact</string>
+    <string name="txt_to_account">To Account</string>
+    <string name="txt_to_self">To self</string>
+    <string name="txt_split_bill">Split Bill</string>
+    <string name="txt_check_bank_balance">Check Bank Balance</string>
+    <string name="txt_wallet_topup">Wallet Topup</string>
+    <string name="txt_add_reminders">Add Reminders</string>
+    <string name="txt_request_money">Request Money</string>
+    <string name="txt_mobile_number">8605351801</string>
+    <string name="txt_user_name">Prasad Sawant</string>
+    <string name="txt_name_initials">PS</string>
+    <string name="txt_month">Month</string>
+    <string name="txt_filters">Filters</string>
+
+
+</resources>

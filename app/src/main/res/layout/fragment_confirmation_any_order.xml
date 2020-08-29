@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ConfirmationAnyOrder">
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_above="@+id/goToHome"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:background="@color/green_600">
+
+
+               <ImageView
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_marginTop="20dp"
+                   android:src="@drawable/success_tick"
+                   android:tint="@color/white"/>
+
+               <TextView
+                   android:id="@+id/paymentText"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Payment Successfully"
+                   android:textColor="@color/white"
+                   android:fontFamily="@font/poppinsregular"
+                   android:layout_marginTop="10dp"
+                   android:paddingStart="10dp"
+                   android:paddingEnd="10dp"
+                   android:textSize="17sp"/>
+
+               <TextView
+                   android:id="@+id/RechargeDate"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="25 May 2020"
+                   android:textColor="@color/white"
+                   android:fontFamily="@font/poppinsregular"
+                   android:layout_marginTop="3dp"
+                   android:paddingStart="10dp"
+                   android:paddingEnd="10dp"
+                   android:layout_marginBottom="20dp"
+                   android:textSize="17sp"/>
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Transaction ID"
+               android:textColor="@color/black"
+               android:fontFamily="@font/poppinsregular"
+               android:paddingStart="10dp"
+               android:paddingEnd="10dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="5dp"
+               android:layout_marginEnd="5dp"
+               android:textSize="17sp"/>
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="3dp">
+
+               <TextView
+                   android:id="@+id/transactionId"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="NMNB1235KL"
+                   android:layout_alignParentStart="true"
+                   android:textColor="@color/black"
+                   android:fontFamily="@font/poppinsregular"
+                   android:layout_marginStart="5dp"
+                   android:layout_marginEnd="5dp"
+                   android:paddingStart="10dp"
+                   android:paddingEnd="10dp"
+                   android:textSize="17sp"/>
+
+               <TextView
+                   android:id="@+id/amount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="15000"
+                   android:textColor="@color/black"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginEnd="5dp"
+                   android:fontFamily="@font/poppinsregular"
+                   android:paddingStart="10dp"
+                   android:paddingEnd="10dp"
+                   android:textSize="17sp"/>
+
+
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+
+
+
+   </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/goToHome"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:text="Go To Home"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/colorPrimary"/>
+
+
+</RelativeLayout>

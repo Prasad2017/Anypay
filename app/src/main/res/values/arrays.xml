@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="circle">
+
+        <item>Andhra Pradesh &amp; Telangana</item>
+        <item>Assam</item>
+        <item>Bihar &amp; Jharkhand</item>
+        <item>Delhi</item>
+        <item>Gujarat</item>
+        <item>Himachal Pradesh</item>
+        <item>Haryana</item>
+        <item>Jammu and Kashmir</item>
+        <item>Kerala &amp; Lakshadweep</item>
+        <item>Karnataka</item>
+        <item>Kolkata</item>
+        <item>Maharashtra &amp; Goa</item>
+        <item>Madhya Pradesh &amp; Chhattisgarh</item>
+        <item>Mumbai</item>
+        <item>North East</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Tamil Nadu</item>
+        <item>UP (East)</item>
+        <item>UP (West)</item>
+        <item>West Bengal</item>
+        <item>Ghaziabad &amp; Noida</item>
+
+    </array>
+
+    <array name="operator">
+
+        <item>4</item>
+        <item>5</item>
+        <item>45</item>
+
+    </array>
+
+</resources>
