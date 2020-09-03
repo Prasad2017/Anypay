@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.digi.anypayments">
+    package="biz.realpayment">
 
     <dist:module dist:instant="true" />
 
@@ -37,35 +37,35 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
         tools:replace="android:icon">
 
-        <activity android:name=".Activity.ChangePassword"
+        <activity android:name="biz.realpayment.Activity.ChangePassword"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustResize"
             tools:ignore="InnerclassSeparator" />
 
-        <activity android:name=".Activity.ConfirmationAnyOrder"
+        <activity android:name="biz.realpayment.Activity.ConfirmationAnyOrder"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustResize"
             tools:ignore="InnerclassSeparator" />
 
-        <activity android:name=".Activity.ForgotPassword"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:windowSoftInputMode="adjustResize"
-            tools:ignore="InnerclassSeparator" />
-
-        <activity
-            android:name=".Activity.Login"
+        <activity android:name="biz.realpayment.Activity.ForgotPassword"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustResize"
             tools:ignore="InnerclassSeparator" />
 
         <activity
-            android:name=".Activity.MainPage"
+            android:name="biz.realpayment.Activity.Login"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustResize"
             tools:ignore="InnerclassSeparator" />
 
         <activity
-            android:name=".Activity.SplashScreen"
+            android:name="biz.realpayment.Activity.MainPage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="InnerclassSeparator" />
+
+        <activity
+            android:name="biz.realpayment.Activity.SplashScreen"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustResize"
             tools:ignore="InnerclassSeparator">

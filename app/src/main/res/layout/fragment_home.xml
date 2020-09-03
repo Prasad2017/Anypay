@@ -504,6 +504,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/postpaidLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
@@ -513,13 +514,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:layout_margin="5dp"
-                            android:src="@drawable/gas"
-                            android:tint="@color/colorPrimary"/>
+                            android:src="@drawable/postpaid"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Book a Cylinder"
+                            android:text="Postpaid"
                             android:textSize="12sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/poppinsregular"
@@ -535,6 +535,7 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:layout_marginTop="8dp"
+                    android:visibility="gone"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -643,13 +644,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/gray"/>
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -657,7 +651,7 @@
             android:background="@color/colorPrimary"
             android:layout_marginTop="10dp"
             android:scaleType="centerCrop"
-            android:layout_marginBottom="40dp"/>
+            android:layout_marginBottom="50dp"/>
 
     </LinearLayout>
 
