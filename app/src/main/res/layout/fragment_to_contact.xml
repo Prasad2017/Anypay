@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.CustomerContactList">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:text="Select Number To Pay"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsmedium"/>
+
+    <com.andreabaccega.widget.FormEditText
+        android:id="@+id/searchContact"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:imeOptions="actionDone"
+        android:hint="Search by Number or Name"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsregular"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawableTint="@color/light_black"
+        android:drawablePadding="10dp"
+        android:background="@drawable/edittextborder"/>
+
+    <LinearLayout
+        android:id="@+id/allContactLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginTop="5dp"
+            android:text="All Contact"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:background="@color/grey"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contactRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contactLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/customerImage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/profileimg"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/customerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:text="New Number"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="20dp"/>
+
+            <TextView
+                android:id="@+id/customerMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:text=""
+                android:textColor="@color/black"
+                android:paddingBottom="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="@color/gray"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

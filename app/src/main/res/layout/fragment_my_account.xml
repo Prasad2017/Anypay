@@ -18,6 +18,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/profileLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -48,7 +49,7 @@
                         android:gravity="center_vertical"
                         android:fontFamily="@font/poppinsregular"
                         android:text=""
-                        android:textColor="@android:color/black"
+                        android:textColor="@color/black"
                         android:layout_marginLeft="16dp" />
 
                     <TextView
@@ -59,7 +60,7 @@
                         android:fontFamily="@font/poppinsregular"
                         android:gravity="center_vertical"
                         android:text=""
-                        android:textColor="@android:color/darker_gray"
+                        android:textColor="@color/black"
                         android:layout_marginLeft="16dp" />
 
                 </LinearLayout>
@@ -225,6 +226,34 @@
                     android:layout_marginLeft="16dp" />
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/qrCodeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/scan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="My QR Code"
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="16dp" />
+
+            </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="8dp"
@@ -255,6 +284,7 @@
                     android:text="@string/txt_invite_and_earn"
                     android:textColor="@android:color/black"
                     android:layout_marginLeft="16dp" />
+
             </LinearLayout>
 
             <View

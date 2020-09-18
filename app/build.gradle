@@ -5,11 +5,11 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "biz.realpayment"
+        applicationId "in.realpayment"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 47
-        versionName "5.7"
+        versionCode 1
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -111,7 +111,7 @@ dependencies {
     //noinspection OutdatedLibrary
     // Shimmer
     implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
-    //RozarPay
+    //RazorPay
     implementation 'com.razorpay:checkout:1.5.13'
     //PDF Generator
     implementation 'com.itextpdf:itext7-core:7.1.8'
@@ -157,5 +157,17 @@ dependencies {
 
     implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.2.12-b140109.1041'
     implementation group: 'xerces', name: 'xercesImpl', version: '2.12.0'
-    
+
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+
+    implementation 'it.auron:mecard-parser:1.1.5'
+
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+
+    // barcode reader library
+    implementation 'info.androidhive:barcode-reader:1.1.5'
+    // google vision library
+    implementation 'com.google.android.gms:play-services-vision:20.1.2'
+    implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
+
 }

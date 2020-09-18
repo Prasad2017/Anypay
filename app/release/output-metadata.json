@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.digi.anypayments",
+  "applicationId": "in.realpayment",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "properties": [],
-      "versionCode": 47,
-      "versionName": "5.7",
+      "versionCode": 1,
+      "versionName": "1.0.0",
       "enabled": true,
       "outputFile": "app-release.apk"
     }

@@ -20,12 +20,11 @@
 
             <ImageView
                 android:id="@+id/menu"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="10dp"
-                android:visibility="visible"
                 android:src="@drawable/logo"
                 android:contentDescription="@string/todo" />
 
@@ -41,6 +40,58 @@
                 android:src="@drawable/arrowback"
                 android:tint="@color/white"
                 android:visibility="gone"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                android:fontFamily="@font/poppinsregular"
+                android:layout_toRightOf="@+id/back"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/walletIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/menu"
+                android:src="@drawable/wallet"
+                android:tint="@color/white"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:id="@+id/walletBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="17.5dp"
+                android:text="5000"
+                android:gravity="center"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_toRightOf="@+id/walletIcon"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/qrCodeScan"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/scan"
+                android:tint="@color/white"
+                android:scaleType="centerCrop"
                 android:contentDescription="@string/todo" />
 
         </RelativeLayout>

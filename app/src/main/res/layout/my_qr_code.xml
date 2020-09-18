@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/upiId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/qrCodeImage"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:src="@drawable/logoblackwhite"
+                android:background="@color/white"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Refresh"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="14dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:textSize="18sp"
+                android:paddingStart="14sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="RealPayment"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:text="Accepted Here"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="14dp"
+            android:paddingStart="13sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:text="Scan &amp; Pay Using Real Payment App"/>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/sendQRCodeImage"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:src="@drawable/logoblackwhite"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="10sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:text="or Pay to Mobile Number using RealPayment App"/>
+
+        <TextView
+            android:id="@+id/sendUpiId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/upiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="80dp"
+            android:text="@string/rights"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="8dp"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_above="@+id/saveLayout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+    <LinearLayout
+        android:id="@+id/saveLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Share"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Download"
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

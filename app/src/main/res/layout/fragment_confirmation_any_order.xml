@@ -4,118 +4,247 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ConfirmationAnyOrder">
+    android:background="@color/grey"
+    tools:context=".Fragment.ConfirmationAnyOrder">
 
-   <androidx.core.widget.NestedScrollView
-       android:layout_above="@+id/goToHome"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_above="@+id/goToHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="vertical"
-               android:layout_gravity="center"
-               android:gravity="center"
-               android:background="@color/green_600">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
 
-
-               <ImageView
-                   android:layout_width="50dp"
-                   android:layout_height="50dp"
-                   android:layout_marginTop="20dp"
-                   android:src="@drawable/success_tick"
-                   android:tint="@color/white"/>
-
-               <TextView
-                   android:id="@+id/paymentText"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="Payment Successfully"
-                   android:textColor="@color/white"
-                   android:fontFamily="@font/poppinsregular"
-                   android:layout_marginTop="10dp"
-                   android:paddingStart="10dp"
-                   android:paddingEnd="10dp"
-                   android:textSize="17sp"/>
-
-               <TextView
-                   android:id="@+id/RechargeDate"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="25 May 2020"
-                   android:textColor="@color/white"
-                   android:fontFamily="@font/poppinsregular"
-                   android:layout_marginTop="3dp"
-                   android:paddingStart="10dp"
-                   android:paddingEnd="10dp"
-                   android:layout_marginBottom="20dp"
-                   android:textSize="17sp"/>
-
-           </LinearLayout>
-
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Transaction ID"
-               android:textColor="@color/black"
-               android:fontFamily="@font/poppinsregular"
-               android:paddingStart="10dp"
-               android:paddingEnd="10dp"
-               android:layout_marginTop="20dp"
-               android:layout_marginStart="5dp"
-               android:layout_marginEnd="5dp"
-               android:textSize="17sp"/>
-
-           <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal"
-               android:layout_marginTop="3dp">
-
-               <TextView
-                   android:id="@+id/transactionId"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="NMNB1235KL"
-                   android:layout_alignParentStart="true"
-                   android:textColor="@color/black"
-                   android:fontFamily="@font/poppinsregular"
-                   android:layout_marginStart="5dp"
-                   android:layout_marginEnd="5dp"
-                   android:paddingStart="10dp"
-                   android:paddingEnd="10dp"
-                   android:textSize="17sp"/>
-
-               <TextView
-                   android:id="@+id/amount"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="15000"
-                   android:textColor="@color/black"
-                   android:layout_alignParentEnd="true"
-                   android:layout_marginEnd="5dp"
-                   android:fontFamily="@font/poppinsregular"
-                   android:paddingStart="10dp"
-                   android:paddingEnd="10dp"
-                   android:textSize="17sp"/>
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/green_600">
 
 
-           </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="20dp"
+                        android:tint="@color/white"/>
 
+                    <TextView
+                        android:id="@+id/paymentText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="15sp"/>
 
+                    <TextView
+                        android:id="@+id/RechargeDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginTop="3dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="12sp"/>
 
-       </LinearLayout>
+                </LinearLayout>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction ID"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="15sp"/>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
 
+                    <TextView
+                        android:id="@+id/transactionId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="14sp"/>
 
-   </androidx.core.widget.NestedScrollView>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/paidTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="15sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/paidAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text=""
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/debitedFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinsregular"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="15sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RealPayment Wallet"
+                        android:layout_alignParentStart="true"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/ic_wallet_grey"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/colorPrimary"
+                        android:fontFamily="@font/poppinsregular"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/share"
+                        android:layout_below="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
     <TextView
         android:id="@+id/goToHome"
@@ -125,9 +254,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
         android:text="Go To Home"
-        android:textSize="20sp"
+        android:textSize="17sp"
         android:fontFamily="@font/poppinsregular"
         android:textColor="@color/colorPrimary"/>
-
 
 </RelativeLayout>

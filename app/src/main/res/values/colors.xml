@@ -44,16 +44,16 @@
     <!--Material color list from https://material.io/guidelines/style/color.html-->
 
     <color name="red_900">#B71C1C</color>
-    <color name="red">#B71C1C</color>
+    <color name="red">#ec5745</color>
 
     <color name="deep_purple_400">#7E57C2</color>
 
-    <color name="green_600">#43A047</color>
+    <color name="green_600">#5eaa46</color>
     <color name="green_700">#388E3C</color>
     <color name="green_800">#2E7D32</color>
     <color name="green_900">#1B5E20</color>
 
-    <color name="yellow_800">#F9A825</color>
+    <color name="yellow_800">#f4a624</color>
 
     <color name="blue_grey_900">#263238</color>
 
